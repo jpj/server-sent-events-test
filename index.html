@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>SSE</title>
+		<script type="text/javascript">
+			var eventSource = new EventSource("es.php");
+			eventSource.onmessage = function(e) {
+				console.log("Event: " + e.data);
+			};
+			eventSource.onerror = function(e) {
+				alert("Event source failed!");
+			};
+		</script>
+	</head>
+	<body>
+		<h1>SSE Test</h1>
+	</body>
+</html>
